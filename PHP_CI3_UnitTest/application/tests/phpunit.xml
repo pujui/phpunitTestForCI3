@@ -1,0 +1,39 @@
+<phpunit
+	bootstrap="./Bootstrap.php"
+	colors="true">
+	<testsuites>
+		<testsuite name="CodeIgniter Application Test Suite">
+			<directory suffix="test.php" phpVersion="5.6.0" phpVersionOperator=">=">./</directory>
+			<exclude>./_ci_phpunit_test/</exclude>
+		</testsuite>
+	</testsuites>
+    <!--- groups用於設定要測試及排除的group，使用phpunit指令時會根據此設定。 -->
+    <!---
+    <groups>
+        <include>
+            <group>test1</group>
+        </include>
+        <exclude>
+            <group>test2</group>
+        </exclude>
+    </groups>
+    -->
+    <filter>
+		<whitelist>
+			<directory suffix=".php">../controllers</directory>
+			<directory suffix=".php">../models</directory>
+			<directory suffix=".php">../views</directory>
+			<directory suffix=".php">../libraries</directory>
+			<directory suffix=".php">../helpers</directory>
+			<directory suffix=".php">../hooks</directory>
+		</whitelist>
+	</filter>
+	<logging>
+		<!---
+		<log type="coverage-html" target="../../PHPUnitReport/coverage"/>
+		<log type="coverage-html" target="../../PHPUnitReport/coverage"/>
+		<log type="coverage-clover" target="../../PHPUnitReport/logs/clover.xml"/>
+		<log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/>
+		    -->
+	</logging>
+</phpunit>

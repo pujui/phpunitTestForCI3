@@ -1,0 +1,14 @@
+mt_rand
+rand
+uniqid
+hash_hmac
+md5
+sha1
+hash
+time
+microtime
+date
+function_exists
+header
+setcookie
+openssl_random_pseudo_bytes

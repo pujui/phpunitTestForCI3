@@ -1,0 +1,4 @@
+ExitPatcher
+FunctionPatcher
+MethodPatcher
+ConstantPatcher
